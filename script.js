@@ -1,11 +1,19 @@
-let money;
-let income;
-let addExpenses;
-let deposit;
-let mission;
-let period;
+let money = 100000;
+let income = 'фриланс';
+let addExpenses = 'Аренда, Еда, Отдых, Обучение';
+let deposit = false;
+let mission = 1000000;
+let period = 12;
 
-alert('Проверка');
+console.log(typeof money);
+console.log(typeof income);
+console.log(typeof deposit);
+console.log(addExpenses.length);
+console.log('Период равен ' + period + ' месяцев');
+console.log('Цель заработать ' + mission + ' рублей/долларов/гривен/юани');
 
+console.log(addExpenses.toLowerCase().split(', '));
 
-console.log('Любой текст: ', 'Любой текст');
+let budgetDay = 55000/30;
+
+console.log(budgetDay);
