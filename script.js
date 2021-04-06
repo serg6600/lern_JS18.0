@@ -14,6 +14,6 @@ console.log('Цель заработать ' + mission + ' рублей/долл
 
 console.log(addExpenses.toLowerCase().split(', '));
 
-let budgetDay = 55000/30;
+let budgetDay = 1833;
 
 console.log(budgetDay);
