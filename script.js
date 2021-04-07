@@ -37,7 +37,7 @@ const getTargetMonth = function(){
     return mission/accumulatedMonth;
 };
 
-console.log('getTargetMonth: ', getTargetMonth());
+console.log('getTargetMonth: ', Math.ceil(getTargetMonth()));
 
 let budgetDay = accumulatedMonth/30;
 
