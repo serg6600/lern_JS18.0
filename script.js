@@ -21,6 +21,10 @@ let appData = {
     deposit: false,
     mission: 50000,
     period: 3,
+    budget: money,
+    budgetMonth: 0,
+    budgetDay: 0,
+    expensesMonth: 0,
     asking: function(){
         let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
             appData.addExpenses = addExpenses.toLowerCase().split(', ');
@@ -32,17 +36,11 @@ let appData = {
                         checkPrompt = prompt('Во сколько это обойдется?');
                     } while(!isNumber(checkPrompt));
                 appData.expenses[temp] = Number(checkPrompt);
-
             }
     }
 };
 
 appData.asking();
-
-appData.budget = money;
-appData.budgetDay = 0;
-appData.budgetMonth = 0;
-appData.expensesMonth = 0;
 
 appData.getExpensesMonth = function(){
     let sum = 0;
@@ -88,8 +86,23 @@ if (Math.ceil(appData.getTargetMonth()) > 0 && isFinite(Math.ceil(appData.getTar
 
 console.log('Уровень дохода: ', appData.budget);
 
-for(let key in appData){
-    console.log('Наша программа включает в себя данные: ' + key + ' ' + appData[key]);
-}
+console.log('Наша программа включает в себя данные:');
 
-console.log(appData);
+let findobj = function(arg){
+    if ((arg instanceof Object) && !(arg instanceof Array) && !(arg instanceof Function)){
+        return true;
+    }
+    return false;
+};
+
+for(let key in appData){
+    if (findobj(appData[key])){
+        console.log(key + ':{');
+        for(let i in appData[key]){
+            console.log(i + ': ' + appData[key][i]);
+        }
+        console.log('}');
+        continue;
+    }
+    console.log(key + ' ' + appData[key]);
+}
