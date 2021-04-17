@@ -88,21 +88,6 @@ console.log('Уровень дохода: ', appData.budget);
 
 console.log('Наша программа включает в себя данные:');
 
-let findobj = function(arg){
-    if ((arg instanceof Object) && !(arg instanceof Array) && !(arg instanceof Function)){
-        return true;
-    }
-    return false;
-};
-
 for(let key in appData){
-    if (findobj(appData[key])){
-        console.log(key + ':{');
-        for(let i in appData[key]){
-            console.log(i + ': ' + appData[key][i]);
-        }
-        console.log('}');
-        continue;
-    }
-    console.log(key + ' ' + appData[key]);
+    console.log(key, appData[key]);
 }
