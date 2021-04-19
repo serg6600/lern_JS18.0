@@ -40,16 +40,17 @@ let appData = {
             appData.income[itemIncome] = cashIncome;
         }
         let addExpenses;
-        let numberCount = 0;
+        let arrNumber = 0;
         do{
             addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
             let addExpensesArr = addExpenses.toLowerCase().split(', ');
             for(let item of addExpensesArr){
                 if (isNumber(item)) {
-                    numberCount++;
+                    arrNumber = 1;
+                    break;
                 }
             }
-        } while (numberCount--);
+        } while (arrNumber--);
         appData.addExpenses = addExpenses.toLowerCase().split(', ');
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
         for (let i = 0; i<2; i++) {
