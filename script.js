@@ -39,7 +39,17 @@ let appData = {
                 } while (!isNumber(cashIncome));
             appData.income[itemIncome] = cashIncome;
         }
-        let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+        let addExpenses;
+        let numberCount = 0;
+        do{
+            addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+            let addExpensesArr = addExpenses.toLowerCase().split(', ');
+            for(let item of addExpensesArr){
+                if (isNumber(item)) {
+                    numberCount++;
+                }
+            }
+        } while (numberCount--);
         appData.addExpenses = addExpenses.toLowerCase().split(', ');
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
         for (let i = 0; i<2; i++) {
