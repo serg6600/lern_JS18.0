@@ -132,3 +132,25 @@ for(let item of appData.addExpenses){
 }
 
 console.log(addExpensesString.slice(0, -2));
+
+let calculate = document.getElementById('start'),
+    btnPlus1 = document.getElementsByTagName('button')[0],
+    btnPlus2 = document.getElementsByTagName('button')[1],
+    checkDeposit = document.querySelector('#deposit-check'),
+    addIncomeItems = document.querySelectorAll('.additional_income-item'),
+    
+    budgetDayValue = document.querySelector('.budget_day-value'),
+    expensesMonthValue = document.querySelector('.expenses_month-value'),
+    additionalIncomeValue = document.querySelector('.additional_income-value'),
+    additionalExpensesValue= document.querySelector('.additional_expenses-value'),
+    incomePeriodValue = document.querySelector('.income_period-value'),
+    targetMonthValue = document.querySelector('.target_month-value'),
+    
+    inputMoney = document.querySelector('.salary-amount'),
+    incomeTitle = document.getElementsByClassName('income-title')[1],
+    incomeAmount = document.querySelector('.income-amount'),
+    expensesTitle = document.getElementsByClassName('expenses-title')[1],
+    expensesAmount = document.querySelector('.expenses-amount'),
+    additionalExpensesItem = document.querySelector('.additional_expenses-item'),
+    targetAmount = document.querySelector('.target-amount'),
+    periodSelect = document.querySelector('.period-select');
