@@ -40,7 +40,7 @@ let appData = {
             appData.income[itemIncome] = cashIncome;
         }
         let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-        appData.addExpenses = addExpenses.toLowerCase().split(', ');
+        appData.addExpenses = addExpenses.toLowerCase().split(',');
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
         for (let i = 0; i<2; i++) {
             let itemExpenses = '';
@@ -138,13 +138,14 @@ let calculate = document.getElementById('start'),
     btnPlus2 = document.getElementsByTagName('button')[1],
     checkDeposit = document.querySelector('#deposit-check'),
     addIncomeItems = document.querySelectorAll('.additional_income-item'),
-    
-    budgetDayValue = document.querySelector('.budget_day-value'),
-    expensesMonthValue = document.querySelector('.expenses_month-value'),
-    additionalIncomeValue = document.querySelector('.additional_income-value'),
-    additionalExpensesValue= document.querySelector('.additional_expenses-value'),
-    incomePeriodValue = document.querySelector('.income_period-value'),
-    targetMonthValue = document.querySelector('.target_month-value'),
+
+    budgetMonthValue = document.getElementsByClassName('budget_month-value'),
+    budgetDayValue = document.getElementsByClassName('budget_day-value'),
+    expensesMonthValue = document.getElementsByClassName('expenses_month-value'),
+    additionalIncomeValue = document.getElementsByClassName('additional_income-value'),
+    additionalExpensesValue= document.getElementsByClassName('additional_expenses-value'),
+    incomePeriodValue = document.getElementsByClassName('income_period-value'),
+    targetMonthValue = document.getElementsByClassName('target_month-value'),
     
     inputMoney = document.querySelector('.salary-amount'),
     incomeTitle = document.getElementsByClassName('income-title')[1],
