@@ -139,6 +139,7 @@ let calculate = document.getElementById('start'),
     checkDeposit = document.querySelector('#deposit-check'),
     addIncomeItems = document.querySelectorAll('.additional_income-item'),
 
+<<<<<<< HEAD
     budgetMonthValue = document.getElementsByClassName('budget_month-value')[0],
     budgetDayValue = document.getElementsByClassName('budget_day-value')[0],
     expensesMonthValue = document.getElementsByClassName('expenses_month-value')[0],
@@ -146,6 +147,15 @@ let calculate = document.getElementById('start'),
     additionalExpensesValue= document.getElementsByClassName('additional_expenses-value')[0],
     incomePeriodValue = document.getElementsByClassName('income_period-value')[0],
     targetMonthValue = document.getElementsByClassName('target_month-value')[0],
+=======
+    budgetMonthValue = document.getElementsByClassName('budget_month-value'),
+    budgetDayValue = document.getElementsByClassName('budget_day-value'),
+    expensesMonthValue = document.getElementsByClassName('expenses_month-value'),
+    additionalIncomeValue = document.getElementsByClassName('additional_income-value'),
+    additionalExpensesValue= document.getElementsByClassName('additional_expenses-value'),
+    incomePeriodValue = document.getElementsByClassName('income_period-value'),
+    targetMonthValue = document.getElementsByClassName('target_month-value'),
+>>>>>>> 67826840c4320357fe7b3b19adf6112aee3c2fb1
     
     inputMoney = document.querySelector('.salary-amount'),
     incomeTitle = document.getElementsByClassName('income-title')[1],
