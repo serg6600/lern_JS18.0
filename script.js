@@ -178,6 +178,7 @@ class AppData {
         resetButton.addEventListener('click', this.reset.bind(this));
     }
     reset(){
+	budgetDayValue.disabled = true;
         calculate.disabled = true;
         inputMoney.disabled = false;
         inputMoney.value = '';
@@ -212,7 +213,14 @@ class AppData {
         incomePlus.disabled = false;
         expensesPlus.disabled = false;
         checkDeposit.disabled = false;
-    
+	    budgetMonthValue.value = 0;
+	    budgetDayValue.value = 0;
+	    expensesMonthValue.value = 0;
+	    additionalIncomeValue.value = 'Наименование';
+	    additionalExpensesValue.value = 'Наименование';
+	    incomePeriodValue.value = 0;
+	    targetMonthValue.value = 'Срок';
+	
         this.income = {};
         this.incomeMonth = 0;
         this.addIncome = [];
