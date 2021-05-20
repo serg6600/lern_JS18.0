@@ -58,13 +58,13 @@ class AppData {
         this.blockInputsAndChangeButton();
     }
     showResult(){
-        budgetMonthValue.value = this.budgetMonth;
+        budgetMonthValue.value = Math.round(this.budgetMonth);
         budgetDayValue.value = this.budgetDay;
         expensesMonthValue.value = this.expensesMonth;
         additionalExpensesValue.value = this.addExpenses.join(', ');
         additionalIncomeValue.value = this.addIncome.join(', ');
         targetMonthValue.value = Math.ceil(this.getTargetMonth());
-        incomePeriodValue.value = this.budgetMonth * periodSelect.value;
+        incomePeriodValue.value = Math.round(this.budgetMonth * periodSelect.value);
         periodSelect.addEventListener('input', this.calcSavedMoney.bind(this));
     }
     addIncomeBlock(){
@@ -154,7 +154,7 @@ class AppData {
         periodAmount.textContent = periodSelect.value;
     }
     calcSavedMoney(){
-        incomePeriodValue.value = this.budgetMonth * periodSelect.value;
+        incomePeriodValue.value = Math.round(this.budgetMonth * periodSelect.value);
     }
     blockInputsAndChangeButton(){
         inputMoney.disabled = true;
